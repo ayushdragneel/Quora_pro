@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "124151125652",
+    "project_id": "quorapro-a82d4",
+    "storage_bucket": "quorapro-a82d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124151125652:android:5e61382009a10d8bdd8681",
+        "android_client_info": {
+          "package_name": "com.example.quora_pro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124151125652-4hr48003p6669fn8p2g234r0g0rvsa3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGRTDm0wxDDHZQcXP2-Viq_xoqn__sOfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124151125652-4hr48003p6669fn8p2g234r0g0rvsa3s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
