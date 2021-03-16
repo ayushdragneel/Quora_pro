@@ -1,2 +1,2 @@
 # Quora_pro
-this app is clone of the official of qoura
+this app is clone of the official qoura app
