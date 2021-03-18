@@ -14,6 +14,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
 
 public class mainLayout extends AppCompatActivity implements View.OnClickListener{
@@ -24,10 +26,14 @@ public class mainLayout extends AppCompatActivity implements View.OnClickListene
     ArrayList<String> answer;
     ImageView homeImage,askImage,searchImage,notifyImage,profileImage;
 
+    FirebaseFirestore db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_layout);
+        db=FirebaseFirestore.getInstance();
+
         homeImage=findViewById(R.id.homeIt);
         homeImage.setOnClickListener(this);
         searchImage=findViewById(R.id.searchIt);
@@ -38,16 +44,16 @@ public class mainLayout extends AppCompatActivity implements View.OnClickListene
         notifyImage.setOnClickListener(this);
         profileImage=findViewById(R.id.profileIt);
         profileImage.setOnClickListener(this);
+
+
         Log.d("Ayush","number 6");
         Bundle bundle = getIntent().getExtras();
         String message = bundle.getString("TAG");
         Log.d("Ayush","number 7");
+
+
         question =new ArrayList<>();
         answer=new ArrayList<>();
-        for(int i=0;i<5;i++){
-            question.add("Ayush");
-            answer.add("singh");
-        }
 
        // frameLayout=findViewById(R.id.frameLayout);
         questionlist list=new questionlist(question,answer);
@@ -92,6 +98,11 @@ public class mainLayout extends AppCompatActivity implements View.OnClickListene
 
             case R.id.profileIt:
                 profileImage.setBackgroundResource(R.color.app_name);
+                Intent iprofile=new Intent(this,allInOneActivity.class);
+                iprofile.putExtra("TAG","Ayush");
+
+                startActivity(iprofile);
+
                 break;
 
 

@@ -45,7 +45,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d("Ayush","number 1");
+
+
         firebaseAuth=FirebaseAuth.getInstance();
+
+
         email=findViewById(R.id.EmailEdit);
         password=findViewById(R.id.PasswordEdit);
         SignIn=findViewById(R.id.SignInBox);
@@ -59,9 +63,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    public boolean valideForm(){
-        return true;
-    }
+//    public boolean valideForm(){
+//        return true;
+//    }
     public void updateUI(FirebaseUser user){
                 Intent i=new Intent(MainActivity.this,mainLayout.class);
                 String id=user.getUid();
